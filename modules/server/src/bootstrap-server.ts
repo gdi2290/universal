@@ -126,9 +126,9 @@ function _injectorBindings(appComponentType): List<Type | Binding | List<any>> {
     bind(ShadowDomStrategy).toFactory(doc => {
       return new EmulatedUnscopedShadowDomStrategy(doc.head);
     }, [DOCUMENT_TOKEN]),
-    DomRenderer,
+    // DomRenderer,
     DefaultDomCompiler,
-    bind(Renderer).toAlias(DomRenderer),
+    // bind(Renderer).toAlias(DomRenderer),
     bind(RenderCompiler).toAlias(DefaultDomCompiler),
     ProtoViewFactory,
     AppViewPool,
